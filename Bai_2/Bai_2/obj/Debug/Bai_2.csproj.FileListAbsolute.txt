@@ -1,0 +1,7 @@
+D:\C#\Bai_Tap_Co_Ban_1\NguyenThanhNhan_1911505310242\Bai_2\Bai_2\bin\Debug\Bai_2.exe.config
+D:\C#\Bai_Tap_Co_Ban_1\NguyenThanhNhan_1911505310242\Bai_2\Bai_2\bin\Debug\Bai_2.exe
+D:\C#\Bai_Tap_Co_Ban_1\NguyenThanhNhan_1911505310242\Bai_2\Bai_2\bin\Debug\Bai_2.pdb
+D:\C#\Bai_Tap_Co_Ban_1\NguyenThanhNhan_1911505310242\Bai_2\Bai_2\obj\Debug\Bai_2.csprojAssemblyReference.cache
+D:\C#\Bai_Tap_Co_Ban_1\NguyenThanhNhan_1911505310242\Bai_2\Bai_2\obj\Debug\Bai_2.csproj.CoreCompileInputs.cache
+D:\C#\Bai_Tap_Co_Ban_1\NguyenThanhNhan_1911505310242\Bai_2\Bai_2\obj\Debug\Bai_2.exe
+D:\C#\Bai_Tap_Co_Ban_1\NguyenThanhNhan_1911505310242\Bai_2\Bai_2\obj\Debug\Bai_2.pdb
