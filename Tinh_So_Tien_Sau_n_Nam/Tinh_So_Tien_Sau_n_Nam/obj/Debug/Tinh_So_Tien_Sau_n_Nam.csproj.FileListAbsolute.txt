@@ -1,0 +1,7 @@
+D:\C#\BT_Tren_Lop\Tinh_So_Tien_Sau_n_Nam\Tinh_So_Tien_Sau_n_Nam\obj\Debug\Tinh_So_Tien_Sau_n_Nam.csprojAssemblyReference.cache
+D:\C#\BT_Tren_Lop\Tinh_So_Tien_Sau_n_Nam\Tinh_So_Tien_Sau_n_Nam\obj\Debug\Tinh_So_Tien_Sau_n_Nam.csproj.CoreCompileInputs.cache
+D:\C#\BT_Tren_Lop\Tinh_So_Tien_Sau_n_Nam\Tinh_So_Tien_Sau_n_Nam\bin\Debug\Tinh_So_Tien_Sau_n_Nam.exe.config
+D:\C#\BT_Tren_Lop\Tinh_So_Tien_Sau_n_Nam\Tinh_So_Tien_Sau_n_Nam\bin\Debug\Tinh_So_Tien_Sau_n_Nam.exe
+D:\C#\BT_Tren_Lop\Tinh_So_Tien_Sau_n_Nam\Tinh_So_Tien_Sau_n_Nam\bin\Debug\Tinh_So_Tien_Sau_n_Nam.pdb
+D:\C#\BT_Tren_Lop\Tinh_So_Tien_Sau_n_Nam\Tinh_So_Tien_Sau_n_Nam\obj\Debug\Tinh_So_Tien_Sau_n_Nam.exe
+D:\C#\BT_Tren_Lop\Tinh_So_Tien_Sau_n_Nam\Tinh_So_Tien_Sau_n_Nam\obj\Debug\Tinh_So_Tien_Sau_n_Nam.pdb
