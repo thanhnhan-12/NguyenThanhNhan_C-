@@ -1,0 +1,6 @@
+D:\C#\BT_Tren_Lop\In_Tam_Giac_Can_Rong\In_Tam_Giac_Can_Rong\bin\Debug\In_Tam_Giac_Can_Rong.exe.config
+D:\C#\BT_Tren_Lop\In_Tam_Giac_Can_Rong\In_Tam_Giac_Can_Rong\bin\Debug\In_Tam_Giac_Can_Rong.exe
+D:\C#\BT_Tren_Lop\In_Tam_Giac_Can_Rong\In_Tam_Giac_Can_Rong\bin\Debug\In_Tam_Giac_Can_Rong.pdb
+D:\C#\BT_Tren_Lop\In_Tam_Giac_Can_Rong\In_Tam_Giac_Can_Rong\obj\Debug\In_Tam_Giac_Can_Rong.csproj.CoreCompileInputs.cache
+D:\C#\BT_Tren_Lop\In_Tam_Giac_Can_Rong\In_Tam_Giac_Can_Rong\obj\Debug\In_Tam_Giac_Can_Rong.exe
+D:\C#\BT_Tren_Lop\In_Tam_Giac_Can_Rong\In_Tam_Giac_Can_Rong\obj\Debug\In_Tam_Giac_Can_Rong.pdb
