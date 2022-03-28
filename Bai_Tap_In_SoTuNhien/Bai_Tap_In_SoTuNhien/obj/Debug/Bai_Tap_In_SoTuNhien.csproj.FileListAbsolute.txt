@@ -1,0 +1,7 @@
+D:\C#\BT_Tren_Lop\Bai_Tap_In_SoTuNhien\Bai_Tap_In_SoTuNhien\bin\Debug\Bai_Tap_In_SoTuNhien.exe.config
+D:\C#\BT_Tren_Lop\Bai_Tap_In_SoTuNhien\Bai_Tap_In_SoTuNhien\bin\Debug\Bai_Tap_In_SoTuNhien.exe
+D:\C#\BT_Tren_Lop\Bai_Tap_In_SoTuNhien\Bai_Tap_In_SoTuNhien\bin\Debug\Bai_Tap_In_SoTuNhien.pdb
+D:\C#\BT_Tren_Lop\Bai_Tap_In_SoTuNhien\Bai_Tap_In_SoTuNhien\obj\Debug\Bai_Tap_In_SoTuNhien.csprojAssemblyReference.cache
+D:\C#\BT_Tren_Lop\Bai_Tap_In_SoTuNhien\Bai_Tap_In_SoTuNhien\obj\Debug\Bai_Tap_In_SoTuNhien.csproj.CoreCompileInputs.cache
+D:\C#\BT_Tren_Lop\Bai_Tap_In_SoTuNhien\Bai_Tap_In_SoTuNhien\obj\Debug\Bai_Tap_In_SoTuNhien.exe
+D:\C#\BT_Tren_Lop\Bai_Tap_In_SoTuNhien\Bai_Tap_In_SoTuNhien\obj\Debug\Bai_Tap_In_SoTuNhien.pdb
