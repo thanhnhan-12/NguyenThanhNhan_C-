@@ -1,0 +1,7 @@
+D:\C#\BT_Tren_Lop\Bai_Tap_In_Tuoi\Bai_Tap_In_Tuoi\bin\Debug\Bai_Tap_In_Tuoi.exe.config
+D:\C#\BT_Tren_Lop\Bai_Tap_In_Tuoi\Bai_Tap_In_Tuoi\bin\Debug\Bai_Tap_In_Tuoi.exe
+D:\C#\BT_Tren_Lop\Bai_Tap_In_Tuoi\Bai_Tap_In_Tuoi\bin\Debug\Bai_Tap_In_Tuoi.pdb
+D:\C#\BT_Tren_Lop\Bai_Tap_In_Tuoi\Bai_Tap_In_Tuoi\obj\Debug\Bai_Tap_In_Tuoi.csprojAssemblyReference.cache
+D:\C#\BT_Tren_Lop\Bai_Tap_In_Tuoi\Bai_Tap_In_Tuoi\obj\Debug\Bai_Tap_In_Tuoi.csproj.CoreCompileInputs.cache
+D:\C#\BT_Tren_Lop\Bai_Tap_In_Tuoi\Bai_Tap_In_Tuoi\obj\Debug\Bai_Tap_In_Tuoi.exe
+D:\C#\BT_Tren_Lop\Bai_Tap_In_Tuoi\Bai_Tap_In_Tuoi\obj\Debug\Bai_Tap_In_Tuoi.pdb
