@@ -1,0 +1,7 @@
+D:\C#\BT_Tren_Lop\In_Ra_SoLonNhat\In_Ra_SoLonNhat\bin\Debug\In_Ra_SoLonNhat.exe.config
+D:\C#\BT_Tren_Lop\In_Ra_SoLonNhat\In_Ra_SoLonNhat\bin\Debug\In_Ra_SoLonNhat.exe
+D:\C#\BT_Tren_Lop\In_Ra_SoLonNhat\In_Ra_SoLonNhat\bin\Debug\In_Ra_SoLonNhat.pdb
+D:\C#\BT_Tren_Lop\In_Ra_SoLonNhat\In_Ra_SoLonNhat\obj\Debug\In_Ra_SoLonNhat.csprojAssemblyReference.cache
+D:\C#\BT_Tren_Lop\In_Ra_SoLonNhat\In_Ra_SoLonNhat\obj\Debug\In_Ra_SoLonNhat.csproj.CoreCompileInputs.cache
+D:\C#\BT_Tren_Lop\In_Ra_SoLonNhat\In_Ra_SoLonNhat\obj\Debug\In_Ra_SoLonNhat.exe
+D:\C#\BT_Tren_Lop\In_Ra_SoLonNhat\In_Ra_SoLonNhat\obj\Debug\In_Ra_SoLonNhat.pdb
