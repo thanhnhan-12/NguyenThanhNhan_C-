@@ -66,16 +66,26 @@ namespace BT_STRUCT_ENUM_FOREACH
      
 
         static void InThongTinSinhVien(SinhVien [] arr_242, int n_242 )
-        {           
+        {
+            Console.Write("\nHo ten sinh vien " + "| " + "Ma sinh vien " + " | " + "Lop " + " | " + "Diem toan " + "| " + "Diem ly " + "| " + "Diem hoa " + "| " + "Diem trung binh");
             for(int i_242 = 0; i_242 < n_242; i_242++)
             {
                 Console.Write("\n");
-                Console.Write("\n => Ho ten sinh vien: " + arr_242[i_242].HoTen_242);
-                Console.Write("\n => Ma sinh vien: " + arr_242[i_242].MaSV_242);
-                Console.Write("\n => Lop: " + arr_242[i_242].Lop_242);
-                Console.Write("\n => Diem toan: " + arr_242[i_242].Toan_242);
-                Console.Write("\n => Diem ly: " + arr_242[i_242].Ly_242);
-                Console.Write("\n => Diem hoa: " + arr_242[i_242].Hoa_242);
+                Console.Write(arr_242[i_242].HoTen_242 + "             | " + 
+                              arr_242[i_242].MaSV_242 + " | " + 
+                              arr_242[i_242].Lop_242 + " | " + 
+                              arr_242[i_242].Toan_242 + "         | " + 
+                              arr_242[i_242].Ly_242 + "       | " + 
+                              arr_242[i_242].Hoa_242 + "        | " + 
+                              ((arr_242[i_242].Toan_242 + arr_242[i_242].Ly_242 + arr_242[i_242].Hoa_242) / 3.0));
+
+                //Console.Write("\n => Ho ten sinh vien: " + arr_242[i_242].HoTen_242);
+                //Console.Write("\n => Ma sinh vien: " + arr_242[i_242].MaSV_242);
+                //Console.Write("\n => Lop: " + arr_242[i_242].Lop_242);
+                //Console.Write("\n => Diem toan: " + arr_242[i_242].Toan_242);
+                //Console.Write("\n => Diem ly: " + arr_242[i_242].Ly_242);
+                //Console.Write("\n => Diem hoa: " + arr_242[i_242].Hoa_242);
+                //Console.Write("\n => Diem trung binh: " + ((arr_242[i_242].Toan_242 + arr_242[i_242].Ly_242 + arr_242[i_242].Hoa_242) / 3.0) );
             }
             
         }
@@ -101,7 +111,7 @@ namespace BT_STRUCT_ENUM_FOREACH
             Console.Write("\n<-------------------------------------->");
 
             NhapThongTinSinhVien( arr_42, n_242);           
-            Console.Write("\n\nThong tin cua sinh vien: ");
+            Console.Write("\n\nDanh sach thong tin cua sinh vien: ");
             InThongTinSinhVien( arr_42, n_242);
 
             Console.ReadKey();
