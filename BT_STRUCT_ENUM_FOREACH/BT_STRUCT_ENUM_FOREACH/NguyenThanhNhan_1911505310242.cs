@@ -25,48 +25,59 @@ namespace BT_STRUCT_ENUM_FOREACH
             DiemHoa_242 = 7,
         }
 
-        static void NhapThongTinSinhVien(out SinhVien SV)
+        static void NhapThongTinSinhVien(SinhVien [] arr_242, int n_242 )
         {
-            Console.Write("\nNhap ho ten sinh vien: ");
-            SV.HoTen_242 = Console.ReadLine();
-            Console.Write("\nNhap ma sinh vien: ");
-            SV.MaSV_242 = Console.ReadLine();
-            Console.Write("\nNhap lop: ");
-            SV.Lop_242 = Console.ReadLine();
-          
-            Console.Write("\nNhap diem toan: ");
-            SV.Toan_242 = double.Parse(Console.ReadLine());
-            Console.Write("\nNhap diem ly: ");
-            SV.Ly_242 = double.Parse(Console.ReadLine());
-            Console.Write("\nNhap diem hoa: ");
-            SV.Hoa_242 = double.Parse(Console.ReadLine());
+           
+            for (int i_242 = 0; i_242 < n_242; i_242++)
+            {
+                Console.Write("\n_Nhap ho ten sinh vien thu " + i_242 + ": ");
+                arr_242[i_242].HoTen_242 = Console.ReadLine();
+                Console.Write("\n_Nhap ma sinh vien: ");
+                arr_242[i_242].MaSV_242 = Console.ReadLine();
+                Console.Write("\n_Nhap lop: ");
+                arr_242[i_242].Lop_242 = Console.ReadLine();
 
+                Console.Write("\n_Nhap diem toan: ");
+                arr_242[i_242].Toan_242 = double.Parse(Console.ReadLine());
+                Console.Write("\n_Nhap diem ly: ");
+                arr_242[i_242].Ly_242 = double.Parse(Console.ReadLine());
+                Console.Write("\n_Nhap diem hoa: ");
+                arr_242[i_242].Hoa_242 = double.Parse(Console.ReadLine());
+                Console.Write("<-------------------------------------->");
+                
+            }
+           
 
-            if (SV.Toan_242 == (double)DiemMonHoc.DiemToan_242)
-                Console.Write("\n Diem toan: " + SV.Toan_242);
-            else
-                Console.Write("\nDiem toan khong dung! ");
+            //if (SV.Toan_242 == (double)DiemMonHoc.DiemToan_242)
+            //    Console.Write("\n Diem toan: " + SV.Toan_242);
+            //else
+            //    Console.Write("\nDiem toan khong dung! ");
 
-            if (SV.Ly_242 == (double)DiemMonHoc.DiemLy_242)
-                Console.Write("\n Diem ly: " + SV.Ly_242);
-            else
-                Console.Write("\nDiem ly khong dung! ");
+            //if (SV.Ly_242 == (double)DiemMonHoc.DiemLy_242)
+            //    Console.Write("\n Diem ly: " + SV.Ly_242);
+            //else
+            //    Console.Write("\nDiem ly khong dung! ");
 
-            if (SV.Hoa_242 == (double)DiemMonHoc.DiemHoa_242)
-                Console.Write("\n Diem hoa: " + SV.Hoa_242);
-            else
-                Console.Write("\nDiem hoa khong dung! ");
+            //if (SV.Hoa_242 == (double)DiemMonHoc.DiemHoa_242)
+            //    Console.Write("\n Diem hoa: " + SV.Hoa_242);
+            //else
+            //    Console.Write("\nDiem hoa khong dung! ");
         }
-        
+     
 
-        static void InThongTinSinhVien(SinhVien SV)
-        {
-            Console.Write("\n Ho ten sinh vien: " + SV.HoTen_242);
-            Console.Write("\n Ma sinh vien: " + SV.MaSV_242);
-            Console.Write("\n Lop: " + SV.Lop_242);
-            Console.Write("\n Diem toan: " + SV.Toan_242);
-            Console.Write("\n Diem ly: " + SV.Ly_242);
-            Console.Write("\n Diem hoa: " + SV.Hoa_242);
+        static void InThongTinSinhVien(SinhVien [] arr_242, int n_242 )
+        {           
+            for(int i_242 = 0; i_242 < n_242; i_242++)
+            {
+                Console.Write("\n");
+                Console.Write("\n => Ho ten sinh vien: " + arr_242[i_242].HoTen_242);
+                Console.Write("\n => Ma sinh vien: " + arr_242[i_242].MaSV_242);
+                Console.Write("\n => Lop: " + arr_242[i_242].Lop_242);
+                Console.Write("\n => Diem toan: " + arr_242[i_242].Toan_242);
+                Console.Write("\n => Diem ly: " + arr_242[i_242].Ly_242);
+                Console.Write("\n => Diem hoa: " + arr_242[i_242].Hoa_242);
+            }
+            
         }
 
         //static float DiemTB(SinhVien SV)
@@ -75,19 +86,23 @@ namespace BT_STRUCT_ENUM_FOREACH
         //}
 
         static void Main(string[] args)
-        {
-            SinhVien SV1_242 = new SinhVien();
+        {                     
+            int n_242;
+            Console.Write("Nhap so luong sinh vien: ");
+            n_242 = int.Parse(Console.ReadLine());
+            SinhVien[] arr_42 = new SinhVien[n_242];
 
             string[] DSSV_242 = {"Sy", "1911505310248", "19T2", " 8 ", " 9 ", " 10 " };
             foreach (string ThongTin_242 in DSSV_242)
             {
-                Console.Write("\n Thong tin: " + ThongTin_242);
-                Console.WriteLine("");
+                Console.Write("\nThong tin: " + ThongTin_242);               
+                
             }
+            Console.Write("\n<-------------------------------------->");
 
-            NhapThongTinSinhVien(out SV1_242);
-            Console.Write("\nThong tin cua sinh vien: ");
-            InThongTinSinhVien(SV1_242);
+            NhapThongTinSinhVien( arr_42, n_242);           
+            Console.Write("\n\nThong tin cua sinh vien: ");
+            InThongTinSinhVien( arr_42, n_242);
 
             Console.ReadKey();
         }
