@@ -1,0 +1,6 @@
+D:\C#\Bai_Kiem_Tra_1\NguyenThanhNhan_1911505310242\Bai_3\Bai_3\bin\Debug\Bai_3.exe.config
+D:\C#\Bai_Kiem_Tra_1\NguyenThanhNhan_1911505310242\Bai_3\Bai_3\bin\Debug\Bai_3.exe
+D:\C#\Bai_Kiem_Tra_1\NguyenThanhNhan_1911505310242\Bai_3\Bai_3\bin\Debug\Bai_3.pdb
+D:\C#\Bai_Kiem_Tra_1\NguyenThanhNhan_1911505310242\Bai_3\Bai_3\obj\Debug\Bai_3.csproj.CoreCompileInputs.cache
+D:\C#\Bai_Kiem_Tra_1\NguyenThanhNhan_1911505310242\Bai_3\Bai_3\obj\Debug\Bai_3.exe
+D:\C#\Bai_Kiem_Tra_1\NguyenThanhNhan_1911505310242\Bai_3\Bai_3\obj\Debug\Bai_3.pdb
