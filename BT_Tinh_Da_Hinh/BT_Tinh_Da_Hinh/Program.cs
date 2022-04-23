@@ -9,7 +9,21 @@ namespace BT_Tinh_Da_Hinh
     class Program
     {
         class Triangle_Quadrilateral
-        {
+        {           
+            public void Input()
+            {
+
+            }
+
+            public void Output()
+            {
+
+            }
+
+            public void LuaChon()
+            {
+
+            }
 
         }
 
