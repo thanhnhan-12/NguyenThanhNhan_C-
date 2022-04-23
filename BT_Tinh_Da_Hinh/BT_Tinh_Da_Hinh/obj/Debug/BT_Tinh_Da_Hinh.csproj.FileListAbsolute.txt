@@ -1,0 +1,7 @@
+D:\C#\NguyenThanhNhan_C-\BT_Tinh_Da_Hinh\BT_Tinh_Da_Hinh\bin\Debug\BT_Tinh_Da_Hinh.exe.config
+D:\C#\NguyenThanhNhan_C-\BT_Tinh_Da_Hinh\BT_Tinh_Da_Hinh\bin\Debug\BT_Tinh_Da_Hinh.exe
+D:\C#\NguyenThanhNhan_C-\BT_Tinh_Da_Hinh\BT_Tinh_Da_Hinh\bin\Debug\BT_Tinh_Da_Hinh.pdb
+D:\C#\NguyenThanhNhan_C-\BT_Tinh_Da_Hinh\BT_Tinh_Da_Hinh\obj\Debug\BT_Tinh_Da_Hinh.csprojAssemblyReference.cache
+D:\C#\NguyenThanhNhan_C-\BT_Tinh_Da_Hinh\BT_Tinh_Da_Hinh\obj\Debug\BT_Tinh_Da_Hinh.csproj.CoreCompileInputs.cache
+D:\C#\NguyenThanhNhan_C-\BT_Tinh_Da_Hinh\BT_Tinh_Da_Hinh\obj\Debug\BT_Tinh_Da_Hinh.exe
+D:\C#\NguyenThanhNhan_C-\BT_Tinh_Da_Hinh\BT_Tinh_Da_Hinh\obj\Debug\BT_Tinh_Da_Hinh.pdb
