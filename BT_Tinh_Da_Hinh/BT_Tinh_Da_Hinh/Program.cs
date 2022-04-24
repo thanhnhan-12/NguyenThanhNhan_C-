@@ -44,30 +44,30 @@ namespace BT_Tinh_Da_Hinh
 
         }
 
-        class Triangle : Triangle_Quadrilateral
+        class Triangle : Triangle_Quadrilateral         // Tam giác
         {
-            int Side1_242, Side2_242, Side3_242;
+            int AB_242, AC_242, BC_242;
             public void Input_Tag()         // Nhập cạnh tam giác
             {
                 Console.Write("_Nhap canh thu nhat: ");
-                Side1_242 = int.Parse(Console.ReadLine());
+                AB_242 = int.Parse(Console.ReadLine());
                 Console.Write("_Nhap canh thu hai: ");
-                Side2_242 = int.Parse(Console.ReadLine());
+                AC_242 = int.Parse(Console.ReadLine());
                 Console.Write("_Nhap canh thu ba: ");
-                Side3_242 = int.Parse(Console.ReadLine());
+                BC_242 = int.Parse(Console.ReadLine());
             }
 
             public void Output_Tag()        // In ra cạnh tam giác
             {
-                Console.Write("=> " + Side1_242);
-                Console.Write("\n=> " + Side2_242);
-                Console.Write("\n=> " + Side3_242);
+                Console.Write("=> " + AB_242);
+                Console.Write("\n=> " + AC_242);
+                Console.Write("\n=> " + BC_242);
             }
 
             public void Test_Tag()
             {
-                if ((Side1_242 + Side2_242) > Side3_242 && (Side1_242 + Side3_242) > Side2_242 &&
-                   (Side2_242 + Side3_242) > Side1_242)
+                if ((AB_242 + AC_242) > BC_242 && (AB_242 + BC_242) > AC_242 &&
+                   (AC_242 + BC_242) > AB_242)
                 {
                     Console.WriteLine("\nDay la Hinh tam giac ");
                 }
@@ -77,8 +77,8 @@ namespace BT_Tinh_Da_Hinh
                     Console.WriteLine("\nMoi nhap lai! ");
                     Input_Tag();
                     Output_Tag();
-                    if ((Side1_242 + Side2_242) > Side3_242 && (Side1_242 + Side3_242) > Side2_242 &&
-                        (Side2_242 + Side3_242) > Side1_242)
+                    if ((AB_242 + AC_242) > BC_242 && (AB_242 + BC_242) > AC_242 &&
+                        (AC_242 + BC_242) > AB_242)
                     {
                         Console.Write("\nDay la Hinh tam giac ");
                     }
@@ -102,36 +102,36 @@ namespace BT_Tinh_Da_Hinh
 
         }
 
-        class Parallelogram : Triangle_Quadrilateral
+        class Parallelogram : Triangle_Quadrilateral            // Hình bình hành
         {
-            int Side1_242, Side2_242, Side3_242, Side4_242;
+            int AB_242, AD_242, BC_242, CD_242;
             public void Input_Para()         // Nhập cạnh hình bình hành
             {
                 Console.Write("_Nhap canh thu nhat: ");
-                Side1_242 = int.Parse(Console.ReadLine());
+                AB_242 = int.Parse(Console.ReadLine());
                 Console.Write("_Nhap canh thu hai: ");
-                Side2_242 = int.Parse(Console.ReadLine());
+                AD_242 = int.Parse(Console.ReadLine());
                 Console.Write("_Nhap canh thu ba: ");
-                Side3_242 = int.Parse(Console.ReadLine());
+                BC_242 = int.Parse(Console.ReadLine());
                 Console.Write("_Nhap canh thu tu: ");
-                Side4_242 = int.Parse(Console.ReadLine());
+                CD_242 = int.Parse(Console.ReadLine());
             }
 
             public void Output_Para()        // In ra cạnh hình bình hành
             {
-                Console.Write(" => " + Side1_242);
-                Console.Write("\n => " + Side2_242);
-                Console.Write("\n => " + Side3_242);
-                Console.Write("\n => " + Side4_242);
+                Console.Write(" => " + AB_242);
+                Console.Write("\n => " + AD_242);
+                Console.Write("\n => " + BC_242);
+                Console.Write("\n => " + CD_242);
             }
         }
 
-        class Rectangle : Triangle_Quadrilateral
+        class Rectangle : Triangle_Quadrilateral            // Hình chữ nhật
         {
 
         }
 
-        class Square : Triangle_Quadrilateral
+        class Square : Triangle_Quadrilateral               // Hình vuông
         {
 
         }
