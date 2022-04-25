@@ -204,6 +204,21 @@ namespace BT_Tinh_Da_Hinh
                 }
             }
 
+            public override void Input_Coordinate()
+            {
+                base.Input_Coordinate();
+            }
+
+            public override void Output_Coordinate()
+            {
+                base.Output_Coordinate();
+            }
+
+            public override void Translation_Spells()
+            {
+                base.Translation_Spells();
+            }
+
         }
 
         class Square : Triangle_Quadrilateral               // Hình vuông
@@ -239,6 +254,17 @@ namespace BT_Tinh_Da_Hinh
                         Para_Quad.Output_Coordinate();
                         Para_Quad.Translation_Spells();
 
+                break;
+
+                case 3: Rectangle Rec = new Rectangle();
+                        Rec.Input_Rec();
+                        Rec.Output_Rec();
+                        Rec.Test_Rec();
+                        /*------------------*/
+                        Triangle_Quadrilateral Rec_Quad = new Rectangle();
+                        Rec_Quad.Input_Coordinate();
+                        Rec_Quad.Output_Coordinate();
+                        Rec_Quad.Translation_Spells();
                 break;
 
                 default: Console.Write("Khong hop le! ");
