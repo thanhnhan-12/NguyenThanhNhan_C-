@@ -80,7 +80,7 @@ namespace BT_Tinh_Da_Hinh
                     if ((AB_242 + AC_242) > BC_242 && (AB_242 + BC_242) > AC_242 &&
                         (AC_242 + BC_242) > AB_242)
                     {
-                        Console.Write("\nDay la Hinh tam giac ");                      
+                        Console.WriteLine("\nDay la Hinh tam giac ");                      
                     }
                                                        
                 }
@@ -108,13 +108,13 @@ namespace BT_Tinh_Da_Hinh
             int AB_242, AD_242, BC_242, CD_242;
             public void Input_Para()         // Nhập cạnh hình bình hành
             {
-                Console.Write("_Nhap canh thu nhat: ");
+                Console.Write("_Nhap canh AB: ");
                 AB_242 = int.Parse(Console.ReadLine());
-                Console.Write("_Nhap canh thu hai: ");
+                Console.Write("_Nhap canh AD: ");
                 AD_242 = int.Parse(Console.ReadLine());
-                Console.Write("_Nhap canh thu ba: ");
+                Console.Write("_Nhap canh BC: ");
                 BC_242 = int.Parse(Console.ReadLine());
-                Console.Write("_Nhap canh thu tu: ");
+                Console.Write("_Nhap canh CD: ");
                 CD_242 = int.Parse(Console.ReadLine());
             }
 
@@ -143,6 +143,21 @@ namespace BT_Tinh_Da_Hinh
                         Console.WriteLine("\nDay la hinh binh hanh");
                     }
                 }
+            }
+
+            public override void Input_Coordinate()
+            {
+                base.Input_Coordinate();
+            }
+
+            public override void Output_Coordinate()
+            {
+                base.Output_Coordinate();
+            }
+
+            public override void Translation_Spells()
+            {
+                base.Translation_Spells();
             }
 
         }
@@ -178,6 +193,12 @@ namespace BT_Tinh_Da_Hinh
                 case 2: Parallelogram Para = new Parallelogram();
                         Para.Input_Para();
                         Para.Output_Para();
+                        Para.Test_Para();
+                        /*------------------*/
+                        Triangle_Quadrilateral Para_Quad = new Parallelogram();
+                        Para_Quad.Input_Coordinate();
+                        Para_Quad.Output_Coordinate();
+                        Para_Quad.Translation_Spells();
 
                 break;
 
