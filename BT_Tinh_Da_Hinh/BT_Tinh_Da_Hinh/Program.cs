@@ -223,7 +223,18 @@ namespace BT_Tinh_Da_Hinh
 
         class Square : Triangle_Quadrilateral               // Hình vuông
         {
-
+            int AB_242, AD_242, BC_242, CD_242;
+            public void Input_Rec()         // Nhập cạnh hình vuông
+            {
+                Console.Write("_Nhap canh AB: ");
+                AB_242 = int.Parse(Console.ReadLine());
+                Console.Write("_Nhap canh AD: ");
+                AD_242 = int.Parse(Console.ReadLine());
+                Console.Write("_Nhap canh BC: ");
+                BC_242 = int.Parse(Console.ReadLine());
+                Console.Write("_Nhap canh CD: ");
+                CD_242 = int.Parse(Console.ReadLine());
+            }
         }
 
         static void Main(string[] args)
