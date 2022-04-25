@@ -244,6 +244,29 @@ namespace BT_Tinh_Da_Hinh
                 Console.Write("\n => " + CD_242);
             }
 
+            public void Test_Sq()
+            {
+                if (AB_242 == CD_242 && AD_242 == BC_242 &&
+                    AB_242 == BC_242 && AB_242 == AD_242 &&
+                    CD_242 == BC_242 && AD_242 == CD_242)
+                {
+                    Console.WriteLine("\nDay la hinh vuong");
+                }
+                else
+                {
+                    Console.Write("\nKhong phai hinh chu nhat ");
+                    Console.WriteLine("\nMoi nhap lai! ");
+                    Input_Sq();
+                    Output_Sq();
+                    if (AB_242 == CD_242 && AD_242 == BC_242 && 
+                        AB_242 == BC_242 && AB_242 == AD_242 && 
+                        CD_242 == BC_242 && AD_242 == CD_242)
+                    {
+                        Console.WriteLine("\nDay la hinh vuong");
+                    }
+                }
+            }
+
         }
 
         static void Main(string[] args)
