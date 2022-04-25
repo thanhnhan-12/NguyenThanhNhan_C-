@@ -254,7 +254,7 @@ namespace BT_Tinh_Da_Hinh
                 }
                 else
                 {
-                    Console.Write("\nKhong phai hinh chu nhat ");
+                    Console.Write("\nKhong phai hinh vuong ");
                     Console.WriteLine("\nMoi nhap lai! ");
                     Input_Sq();
                     Output_Sq();
@@ -325,11 +325,21 @@ namespace BT_Tinh_Da_Hinh
                         Rec_Quad.Translation_Spells();
                 break;
 
+                case 4: Square Sq = new Square();
+                        Sq.Input_Sq();
+                        Sq.Output_Sq();
+                        Sq.Test_Sq();
+                        /*------------------*/
+                        Triangle_Quadrilateral Sq_Quad = new Square();
+                        Sq_Quad.Input_Coordinate();
+                        Sq_Quad.Output_Coordinate();
+                        Sq_Quad.Translation_Spells();
+
+                break;
+
                 default: Console.Write("Khong hop le! ");
                 break;
             }
-
-
             Console.ReadKey();
         }
     }
