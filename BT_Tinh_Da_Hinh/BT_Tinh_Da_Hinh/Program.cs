@@ -267,6 +267,21 @@ namespace BT_Tinh_Da_Hinh
                 }
             }
 
+            public override void Input_Coordinate()
+            {
+                base.Input_Coordinate();
+            }
+
+            public override void Output_Coordinate()
+            {
+                base.Output_Coordinate();
+            }
+
+            public override void Translation_Spells()
+            {
+                base.Translation_Spells();
+            }
+
         }
 
         static void Main(string[] args)
