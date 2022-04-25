@@ -165,7 +165,7 @@ namespace BT_Tinh_Da_Hinh
         class Rectangle : Triangle_Quadrilateral            // Hình chữ nhật
         {
             int AB_242, AD_242, BC_242, CD_242;
-            public void Input_Para()         // Nhập cạnh hình chữ nhật
+            public void Input_Rec()         // Nhập cạnh hình chữ nhật
             {
                 Console.Write("_Nhap canh AB: ");
                 AB_242 = int.Parse(Console.ReadLine());
@@ -177,12 +177,31 @@ namespace BT_Tinh_Da_Hinh
                 CD_242 = int.Parse(Console.ReadLine());
             }
 
-            public void Output_Para()        // In ra cạnh hình chữ nhật
+            public void Output_Rec()        // In ra cạnh hình chữ nhật
             {
                 Console.Write(" => " + AB_242);
                 Console.Write("\n => " + AD_242);
                 Console.Write("\n => " + BC_242);
                 Console.Write("\n => " + CD_242);
+            }
+
+            public void Test_Rec()
+            {
+                if (AB_242 == CD_242 || AD_242 == BC_242)
+                {
+                    Console.WriteLine("\nDay la hinh chu nhat");
+                }
+                else
+                {
+                    Console.Write("\nKhong phai hinh chu nhat ");
+                    Console.WriteLine("\nMoi nhap lai! ");
+                    Input_Rec();
+                    Output_Rec();
+                    if (AB_242 == CD_242 || AD_242 == BC_242)
+                    {
+                        Console.WriteLine("\nDay la hinh chu nhat");
+                    }
+                }
             }
 
         }
