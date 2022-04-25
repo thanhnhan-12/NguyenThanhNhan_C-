@@ -176,6 +176,15 @@ namespace BT_Tinh_Da_Hinh
                 Console.Write("_Nhap canh CD: ");
                 CD_242 = int.Parse(Console.ReadLine());
             }
+
+            public void Output_Para()        // In ra cạnh hình chữ nhật
+            {
+                Console.Write(" => " + AB_242);
+                Console.Write("\n => " + AD_242);
+                Console.Write("\n => " + BC_242);
+                Console.Write("\n => " + CD_242);
+            }
+
         }
 
         class Square : Triangle_Quadrilateral               // Hình vuông
