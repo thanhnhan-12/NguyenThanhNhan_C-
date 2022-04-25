@@ -74,14 +74,15 @@ namespace BT_Tinh_Da_Hinh
                 else
                 {
                     Console.Write("\nKhong phai hinh tam giac ");
-                    Console.WriteLine("\nMoi nhap lai! ");
+                    Console.WriteLine("\nMoi nhap lai! ");                 
                     Input_Tag();
                     Output_Tag();
                     if ((AB_242 + AC_242) > BC_242 && (AB_242 + BC_242) > AC_242 &&
                         (AC_242 + BC_242) > AB_242)
                     {
-                        Console.Write("\nDay la Hinh tam giac ");
+                        Console.Write("\nDay la Hinh tam giac ");                      
                     }
+                                                       
                 }
             }
 
@@ -124,6 +125,26 @@ namespace BT_Tinh_Da_Hinh
                 Console.Write("\n => " + BC_242);
                 Console.Write("\n => " + CD_242);
             }
+
+            public void Test_Para()
+            {
+                if(AB_242 == CD_242 || AD_242 == BC_242)
+                {
+                    Console.WriteLine("\nDay la hinh binh hanh");
+                }
+                else
+                {
+                    Console.Write("\nKhong phai hinh binh hanh ");
+                    Console.WriteLine("\nMoi nhap lai! ");
+                    Input_Para();
+                    Output_Para();
+                    if (AB_242 == CD_242 || AD_242 == BC_242)
+                    {
+                        Console.WriteLine("\nDay la hinh binh hanh");
+                    }
+                }
+            }
+
         }
 
         class Rectangle : Triangle_Quadrilateral            // Hình chữ nhật
