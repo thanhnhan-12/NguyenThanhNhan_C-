@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NguyenThanhNhan_1911505310242
 {
-    class PhuongTrinhBac_2
+    class PhuongTrinhBac_2          // Bai 1
     {
         private int a_242, b_242, c_242;
 
@@ -35,7 +35,7 @@ namespace NguyenThanhNhan_1911505310242
 
         public void TinhNghiem() 
         {
-
+            double x1_242, x2_242;
             if (a_242 == 0)
             {
                 if (b_242 != 0)
@@ -76,11 +76,60 @@ namespace NguyenThanhNhan_1911505310242
 
     }
 
+    class Animal
+    {
+        public virtual void eat()
+        {
+            Console.WriteLine("\nAnimal is eating ");
+        }
+
+        public virtual void makeSound()
+        {
+            Console.WriteLine("\nAnimal make sound ");
+        }
+
+    }
+
+    class Cat : Animal
+    {
+        public override void eat()
+        {
+            base.eat();
+        }
+
+        public override void makeSound()
+        {
+            base.makeSound();
+        }
+
+        public void Run()
+        {
+
+        }
+
+    }
+
+    class Bird : Animal
+    {
+
+    }
+
     class NguyenThanhNhan_1911505310242
     {
         static void Main(string[] args)
         {
+            PhuongTrinhBac_2 PTB2 = new PhuongTrinhBac_2();
 
+            Console.Write("Nhap a = ");
+            PTB2.A_242 = int.Parse(Console.ReadLine());
+            Console.Write("Nhap b = ");
+            PTB2.B_242 = int.Parse(Console.ReadLine());
+            Console.Write("Nhap c = ");
+            PTB2.C_242 = int.Parse(Console.ReadLine());
+
+            PTB2.Delta();
+            
+            PTB2.TinhNghiem();
 
             Console.ReadKey();
         }
