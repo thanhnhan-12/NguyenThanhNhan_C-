@@ -76,7 +76,7 @@ namespace NguyenThanhNhan_1911505310242
 
     }
 
-    class Animal
+    class Animal            // Bai 2
     {
         public virtual void eat()
         {
@@ -104,13 +104,27 @@ namespace NguyenThanhNhan_1911505310242
 
         public void Run()
         {
-
+            Console.WriteLine("\nCat is running");
         }
 
     }
 
     class Bird : Animal
     {
+        public override void eat()
+        {
+            base.eat();
+        }
+
+        public override void makeSound()
+        {
+            base.makeSound();
+        }
+
+        public void Fly()
+        {
+            Console.WriteLine("\nBird is flying");
+        }
 
     }
 
@@ -127,9 +141,21 @@ namespace NguyenThanhNhan_1911505310242
             Console.Write("Nhap c = ");
             PTB2.C_242 = int.Parse(Console.ReadLine());
 
-            PTB2.Delta();
-            
+            Console.WriteLine("\nDelta = " + PTB2.Delta());
+                       
             PTB2.TinhNghiem();
+
+            Cat cat = new Cat();
+            Bird bird = new Bird();
+            cat.Run();
+            bird.Fly();
+
+            Animal cat2 = new Cat();
+            Animal bird2 = new Bird();
+            cat2.eat();
+            cat2.makeSound();
+            bird2.eat();
+            bird2.makeSound();
 
             Console.ReadKey();
         }
