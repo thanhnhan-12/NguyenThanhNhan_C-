@@ -26,7 +26,7 @@ namespace NguyenThanhNhan_1911505310242
         static void Max(int[] arr_242, int n_242)
         {
             int Max_242 = arr_242[0];
-            for (int i_242 = 0; i < n_242; i++)
+            for (int i_242 = 0; i_242 < n_242; i_242++)
             {
                 if (Max_242 < arr_242[i_242])
                     Max_242 = arr_242[i_242];
@@ -54,7 +54,25 @@ namespace NguyenThanhNhan_1911505310242
                 {
                     if (arr_242[i_242] > arr_242[j_242])
                     {
-                        // Nếu arr[i] > arr[j] thì hoán đổi giá trị của arr[i] và arr[j]
+                        
+                        int temp_242 = arr_242[i_242];
+                        arr_242[i_242] = arr_242[j_242];
+                        arr_242[j_242] = temp_242;
+                    }
+                }
+            }
+        }
+
+        static void Decrease(int[] arr_242, int n_242)
+        {
+
+            for (int i_242 = 0; i_242 < n_242; i_242++)
+            {
+                for (int j_242 = i_242 + 1; j_242 < n_242; j_242++)
+                {
+                    if (arr_242[i_242] < arr_242[j_242])
+                    {
+                        
                         int temp_242 = arr_242[i_242];
                         arr_242[i_242] = arr_242[j_242];
                         arr_242[j_242] = temp_242;
@@ -77,6 +95,10 @@ namespace NguyenThanhNhan_1911505310242
             Max(arr_242, n_242);
             Min(arr_242, n_242);
 
+            Console.Write("\nMang theo thu tu tang dan: ");
+            Increase(arr_242, n_242);
+            Console.Write("\nMang theo thu tu giam dan: ");
+            Decrease(arr_242, n_242);
 
             Console.ReadKey();
         }
