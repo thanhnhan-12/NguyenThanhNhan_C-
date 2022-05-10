@@ -61,6 +61,7 @@ namespace NguyenThanhNhan_1911505310242
                     }
                 }
             }
+            
         }
 
         static void Decrease(int[] arr_242, int n_242)
@@ -79,6 +80,8 @@ namespace NguyenThanhNhan_1911505310242
                     }
                 }
             }
+            
+
         }
 
         static void Main(string[] args)
@@ -97,8 +100,10 @@ namespace NguyenThanhNhan_1911505310242
 
             Console.Write("\nMang theo thu tu tang dan: ");
             Increase(arr_242, n_242);
+            Output_array(arr_242, n_242);
             Console.Write("\nMang theo thu tu giam dan: ");
             Decrease(arr_242, n_242);
+            Output_array(arr_242, n_242);
 
             Console.ReadKey();
         }
