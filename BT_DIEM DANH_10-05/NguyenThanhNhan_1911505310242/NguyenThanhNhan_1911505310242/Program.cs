@@ -52,7 +52,7 @@ namespace NguyenThanhNhan_1911505310242
             {
                 for (int j_242 = i_242 + 1; j_242 < n_242; j_242++)
                 {
-                    if (arr_242[i] > arr_242[j_242])
+                    if (arr_242[i_242] > arr_242[j_242])
                     {
                         // Nếu arr[i] > arr[j] thì hoán đổi giá trị của arr[i] và arr[j]
                         int temp_242 = arr_242[i_242];
