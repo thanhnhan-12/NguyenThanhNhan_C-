@@ -42,12 +42,12 @@ namespace NguyenThanhNhan_Lab01
         public string Khoa_2421 { get => Khoa_242; set => Khoa_242 = value; }
         public float DiemTB_2421 { get => DiemTB_242; set => DiemTB_242 = value; }
 
-        public virtual void NhapDSSV(Student[] DSSV_242, int n_242)
+        public void NhapDSSV(Student[] DSSV_242, int n_242)
         {
             Console.Write("\n ====NHAP DS SINH VIEN====");
             for (int i = 0; i < n_242; i++) //Lap n lan nhap thong tin sv
             {
-
+                Console.WriteLine("-------------------------");
                 DSSV_242[i] = new Student();
                 Console.Write("\nNhap MaSV {0}: ", i + 1);
                 DSSV_242[i].SID_2421 = int.Parse(Console.ReadLine());
@@ -60,14 +60,14 @@ namespace NguyenThanhNhan_Lab01
             }
         }
 
-        public virtual void XuatDSSV(Student[] DSSV_242, int n_242)
+        public void XuatDSSV(Student[] DSSV_242, int n_242)
         {
             Console.WriteLine("\n ====XUAT DS SINH VIEN====");
             foreach (Student sv in DSSV_242)
                 sv.Show();
         }
 
-        public virtual void Show()
+        public void Show()
         {
             Console.WriteLine(" ");
             Console.WriteLine("-------------------------");
@@ -79,7 +79,7 @@ namespace NguyenThanhNhan_Lab01
 
     }
 
-    class Tester : Student
+    class Tester
     {
         static void Main(string[] args)
         {
