@@ -42,7 +42,7 @@ namespace NguyenThanhNhan_Lab01
         public string Khoa_2421 { get => Khoa_242; set => Khoa_242 = value; }
         public float DiemTB_2421 { get => DiemTB_242; set => DiemTB_242 = value; }
 
-        public void NhapDSSV(Student[] DSSV_242, int n_242)
+        public virtual void NhapDSSV(Student[] DSSV_242, int n_242)
         {
             Console.Write("\n ====NHAP DS SINH VIEN====");
             for (int i = 0; i < n_242; i++) //Lap n lan nhap thong tin sv
@@ -60,14 +60,14 @@ namespace NguyenThanhNhan_Lab01
             }
         }
 
-        public void XuatDSSV(Student[] DSSV_242, int n_242)
+        public virtual void XuatDSSV(Student[] DSSV_242, int n_242)
         {
             Console.WriteLine("\n ====XUAT DS SINH VIEN====");
             foreach (Student sv in DSSV_242)
                 sv.Show();
         }
 
-        public void Show()
+        public virtual void Show()
         {
             Console.WriteLine(" ");
             Console.WriteLine("-------------------------");
@@ -79,7 +79,7 @@ namespace NguyenThanhNhan_Lab01
 
     }
 
-    class Tester
+    class Tester : Student
     {
         static void Main(string[] args)
         {
@@ -88,26 +88,10 @@ namespace NguyenThanhNhan_Lab01
             Console.Write("Nhap so luong sinh vien: ");
             n_242 = int.Parse(Console.ReadLine());
             DSSV_242 = new Student[n_242];
-            //Console.Write("\n ====NHAP DS SINH VIEN====");
-            //for (int i = 0; i < n_242; i++) //Lap n lan nhap thong tin sv
-            //{
-                
-            //    DSSV_242[i] = new Student();
-            //    Console.Write("\nNhap MaSV {0}: ", i + 1);
-            //    DSSV_242[i].SID_2421 = int.Parse(Console.ReadLine());
-            //    Console.Write("\nHo ten SV: ");
-            //    DSSV_242[i].TenSV_2421 = Console.ReadLine();
-            //    Console.Write("\nNhap khoa: ");
-            //    DSSV_242[i].Khoa_2421 = Console.ReadLine();
-            //    Console.Write("\nNhap Diem TB: ");
-            //    DSSV_242[i].DiemTB_2421 = float.Parse(Console.ReadLine());
-            //}
-            //Xuat DS Sinh vien
-            //Console.WriteLine("\n ====XUAT DS SINH VIEN====");
-            //foreach (Student sv in DSSV_242)
-            //    sv.Show();
 
-            
+            Student S1 = new Student();
+            S1.NhapDSSV(DSSV_242, n_242);
+            S1.XuatDSSV(DSSV_242, n_242);
 
             Console.ReadKey();
         }
