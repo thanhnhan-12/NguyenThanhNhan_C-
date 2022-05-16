@@ -62,7 +62,9 @@ namespace NguyenThanhNhan_Lab01
 
         public void XuatDSSV(Student[] DSSV_242, int n_242)
         {
-
+            Console.WriteLine("\n ====XUAT DS SINH VIEN====");
+            foreach (Student sv in DSSV_242)
+                sv.Show();
         }
 
         public void Show()
@@ -101,9 +103,11 @@ namespace NguyenThanhNhan_Lab01
             //    DSSV_242[i].DiemTB_2421 = float.Parse(Console.ReadLine());
             //}
             //Xuat DS Sinh vien
-            Console.WriteLine("\n ====XUAT DS SINH VIEN====");
-            foreach (Student sv in DSSV_242)
-                sv.Show();
+            //Console.WriteLine("\n ====XUAT DS SINH VIEN====");
+            //foreach (Student sv in DSSV_242)
+            //    sv.Show();
+
+            
 
             Console.ReadKey();
         }
