@@ -93,7 +93,8 @@ namespace NguyenThanhNhan_Lab01
             S1.NhapDSSV(DSSV_242, n_242);
             S1.XuatDSSV(DSSV_242, n_242);
 
-            Console.ReadKey();
+            Console.ReadKey();
+
         }
     }
 }
