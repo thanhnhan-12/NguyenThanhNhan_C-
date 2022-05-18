@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NguyenThanhNhan_1911505310242
 {
-    // Xây dựng lớp Person để quản lý thông tin của mỗi cá nhân.
+    // Xây dựng lớp Nguoi (Person) để quản lý thông tin của mỗi cá nhân.
     class Person
     {
         private string name_242;
@@ -46,14 +46,42 @@ namespace NguyenThanhNhan_1911505310242
         public String toString()
         {
             return "Person{" +
-                    "name='" + name_242 + '\'' +
-                    ", age=" + age_242 +
-                    ", job='" + job_242 + '\'' +
-                    ", passport='" + passport_242 + '\'' +
+                    "name = '" + name_242 + '\'' +
+                    ", age = " + age_242 +
+                    ", job = '" + job_242 + '\'' +
+                    ", passport = '" + passport_242 + '\'' +
                     '}';
         }
 
     }
+
+    // Xây dựng lớp HoGiaDinh (Family) để quản lý thông tin của từng hộ gia đình
+    class Family
+    {
+        private List<Person> persons_242;
+        private string address_242;
+
+        public Family(List<Person> nguoi_242, string diachi_242)
+        {
+            //this.persons_242 = persons_242;
+            //this.address_242 = address_242;
+            Persons_242 = nguoi_242;
+            Address_242 = diachi_242;
+        }
+
+        public string Address_242 { get => address_242; set => address_242 = value; }
+        internal List<Person> Persons_242 { get => persons_242; set => persons_242 = value; }
+
+        public string toString()
+        {
+            return "Family{" +
+                "presons = " + persons_242 +
+                ", address = '" + address_242 + '\'' +
+                '}';
+        }
+
+    }
+
 
     class Program
     {
