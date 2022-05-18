@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace NguyenThanhNhan_1911505310242
 {
@@ -78,6 +79,26 @@ namespace NguyenThanhNhan_1911505310242
                 "presons = " + persons_242 +
                 ", address = '" + address_242 + '\'' +
                 '}';
+        }
+
+    }
+
+    // Xây dựng lớp KhuPho (Town) để quản lý các thông tin của từng hộ gia đình.
+    class Town
+    {
+        List<Family> families_242;
+        ArrayList arlist = new ArrayList();
+
+        public Town(ArrayList arlist)
+        {
+            //this.families_242 = new ArrayList();
+        }
+
+       
+
+        public void addFamily(Family family_242)
+        {
+            //this.families_242.Add(family_242);
         }
 
     }
