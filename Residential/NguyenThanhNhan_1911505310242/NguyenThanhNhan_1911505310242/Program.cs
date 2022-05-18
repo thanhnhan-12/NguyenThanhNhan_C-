@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NguyenThanhNhan_1911505310242
 {
+    // Xây dựng lớp Person để quản lý thông tin của mỗi cá nhân.
     class Person
     {
         private string name_242;
@@ -15,26 +16,41 @@ namespace NguyenThanhNhan_1911505310242
 
         public Person()
         {
-            name_242 = "Nguyen Thanh Nhan";
-            age_242 = 21;
-            job_242 = "Sinh vien";
-            passport_242 = "123456";
+            Name_242 = "Nguyen Thanh Nhan";
+            Age_242 = 21;
+            Job_242 = "Sinh vien";
+            Passport_242 = "123456";
         }
 
         public Person(Person per)
         {
-            name_242 = per.name_242;
-            age_242 = per.age_242;
-            job_242 = per.job_242;
-            passport_242 = per.passport_242;
+            Name_242 = per.Name_242;
+            Age_242 = per.Age_242;
+            Job_242 = per.Job_242;
+            Passport_242 = per.Passport_242;
         }
 
         public Person(string ten_242, int tuoi_242, string nghe_242, string CMND_242)
         {
-            name_242 = ten_242;
-            age_242 = tuoi_242;
-            job_242 = nghe_242;
-            passport_242 = CMND_242;
+            Name_242 = ten_242;
+            Age_242 = tuoi_242;
+            Job_242 = nghe_242;
+            Passport_242 = CMND_242;
+        }
+
+        public string Name_242 { get => name_242; set => name_242 = value; }
+        public int Age_242 { get => age_242; set => age_242 = value; }
+        public string Job_242 { get => job_242; set => job_242 = value; }
+        public string Passport_242 { get => passport_242; set => passport_242 = value; }
+
+        public String toString()
+        {
+            return "Person{" +
+                    "name='" + name_242 + '\'' +
+                    ", age=" + age_242 +
+                    ", job='" + job_242 + '\'' +
+                    ", passport='" + passport_242 + '\'' +
+                    '}';
         }
 
     }
