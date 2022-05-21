@@ -35,13 +35,13 @@ namespace NguyenThanhNhan_1911505310242
 
         public virtual void Input_Person()
         {
-            Console.Write("Nhap ho va ten: ");
+            Console.Write("\nNhap ho va ten: ");
             hoten_242 = Console.ReadLine();
-            Console.Write("Nhap tuoi: ");
+            Console.Write("\nNhap tuoi: ");
             tuoi_242 = Int32.Parse(Console.ReadLine());
-            Console.Write("Nhap nghe nghiep: ");
+            Console.Write("\nNhap nghe nghiep: ");
             nghenghiep_242 = Console.ReadLine();
-            Console.Write("Nhap so CMND: ");
+            Console.Write("\nNhap so CMND: ");
             cmnd_242 = Int32.Parse(Console.ReadLine());
         }
 
@@ -80,7 +80,7 @@ namespace NguyenThanhNhan_1911505310242
 
         public void Input_Family()
         {
-            Console.Write("--------------------------");
+            //Console.Write("--------------------------");
             Console.Write("\nNhap so thanh vien: ");
             soThanhVien_242 = Int32.Parse(Console.ReadLine());
             Console.Write("\nNhap so nha: ");
@@ -95,8 +95,8 @@ namespace NguyenThanhNhan_1911505310242
 
         public void Output_Family()
         {
-            Console.Write("So thanh vien: " + soThanhVien_242);
-            Console.Write("So nha: " + soNha_242);
+            Console.Write("\nSo thanh vien: " + soThanhVien_242);
+            Console.Write("\nSo nha: " + soNha_242);
             for (int i_242 = 0; i_242 < soThanhVien_242; i_242++)
             {
                 Console.Write("\nNhap so thanh vien thu " + i_242);
@@ -115,19 +115,20 @@ namespace NguyenThanhNhan_1911505310242
 
         public void Input_Town()
         {
-            Console.Write("\nNhap so ho dan: ");
+            Console.Write("Nhap so ho dan: ");
             soHoDan_242 = Int32.Parse(Console.ReadLine());
             for(int i_242 = 0; i_242 < soHoDan_242; i_242++)
             {
                 Console.Write("\nNhap so ho dan thu " + i_242);
-                hogiadinh_242[i_242] = new Family();
-                hogiadinh_242[i_242].Input_Family();
+                Family hogiadinh_242 = new Family();
+                hogiadinh_242.Input_Family();
             }
             Console.WriteLine("Thong tin tat ca ho dan: ");
             for (int i_242 = 1; i_242 <= soHoDan_242; i_242++)
             {
                 Console.WriteLine("Ho dan thu " + i_242);
-                hogiadinh_242[i_242].Output_Family();
+                Family hogiadinh_242 = new Family();
+                hogiadinh_242.Output_Family();
             }
         }
 
@@ -138,7 +139,9 @@ namespace NguyenThanhNhan_1911505310242
     {
         static void Main(string[] args)
         {
-
+            Town khuPho_242 = new Town();
+            khuPho_242.Input_Town();
+            Console.ReadKey();
         }
     }
 }
