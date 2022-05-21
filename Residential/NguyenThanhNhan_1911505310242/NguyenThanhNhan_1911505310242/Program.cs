@@ -33,7 +33,7 @@ namespace NguyenThanhNhan_1911505310242
         public string Nghenghiep_242 { get => nghenghiep_242; set => nghenghiep_242 = value; }
         public int Cmnd_242 { get => cmnd_242; set => cmnd_242 = value; }
 
-        public virtual void Input()
+        public virtual void Input_Person()
         {
             Console.Write("Nhap ho va ten: ");
             hoten_242 = Console.ReadLine();
@@ -45,7 +45,7 @@ namespace NguyenThanhNhan_1911505310242
             cmnd_242 = Int32.Parse(Console.ReadLine());
         }
 
-        public virtual void Output()
+        public virtual void Output_Person()
         {
             Console.Write("Ho ten: " + hoten_242);
             Console.Write("Tuoi: " + tuoi_242);
@@ -56,9 +56,54 @@ namespace NguyenThanhNhan_1911505310242
     }
 
     // Xây dựng lớp HoGiaDinh (Family) để quản lý thông tin của từng hộ gia đình
-    class Family
+    class Family : Person
     {
-       
+        private int soThanhVien_242;
+        private int soNha_242;
+        private Person[] nguoi_242 = new Person[50];
+
+        public Family()
+        {
+
+        }
+
+        public Family(int soThanhVien_242, int soNha_242, Person[] nguoi_242)
+        {
+            this.SoThanhVien_242 = soThanhVien_242;
+            this.SoNha_242 = soNha_242;
+            this.Nguoi_242 = nguoi_242;
+        }
+
+        public int SoThanhVien_242 { get => soThanhVien_242; set => soThanhVien_242 = value; }
+        public int SoNha_242 { get => soNha_242; set => soNha_242 = value; }
+        internal Person[] Nguoi_242 { get => nguoi_242; set => nguoi_242 = value; }
+
+        public void Input_Family()
+        {
+            Console.Write("--------------------------");
+            Console.Write("\nNhap so thanh vien: ");
+            soThanhVien_242 = Int32.Parse(Console.ReadLine());
+            Console.Write("\nNhap so nha: ");
+            soNha_242 = Int32.Parse(Console.ReadLine());
+            for(int i_242 = 0; i_242 < soThanhVien_242; i_242++)
+            {
+                Console.Write("\nNhap so thanh vien thu " + i_242);
+                Person nguoi_242 = new Person();
+                nguoi_242.Input_Person();
+            }
+        }
+
+        public void Output_Family()
+        {
+            Console.Write("So thanh vien: " + soThanhVien_242);
+            Console.Write("So nha: " + soNha_242);
+            for (int i_242 = 0; i_242 < soThanhVien_242; i_242++)
+            {
+                Console.Write("\nNhap so thanh vien thu " + i_242);
+                Person nguoi_242 = new Person();
+                nguoi_242.Output_Person();
+            }
+        }
 
     }
 
