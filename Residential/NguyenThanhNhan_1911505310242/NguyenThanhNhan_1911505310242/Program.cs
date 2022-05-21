@@ -110,7 +110,26 @@ namespace NguyenThanhNhan_1911505310242
     // Xây dựng lớp KhuPho (Town) để quản lý các thông tin của từng hộ gia đình.
     class Town
     {
-        
+        private Family[] hogiadinh_242 = new Family[50];
+        private int soHoDan_242;
+
+        public void Input_Town()
+        {
+            Console.Write("\nNhap so ho dan: ");
+            soHoDan_242 = Int32.Parse(Console.ReadLine());
+            for(int i_242 = 0; i_242 < soHoDan_242; i_242++)
+            {
+                Console.Write("\nNhap so ho dan thu " + i_242);
+                hogiadinh_242[i_242] = new Family();
+                hogiadinh_242[i_242].Input_Family();
+            }
+            Console.WriteLine("Thong tin tat ca ho dan: ");
+            for (int i_242 = 1; i_242 <= soHoDan_242; i_242++)
+            {
+                Console.WriteLine("Ho dan thu " + i_242);
+                hogiadinh_242[i_242].Output_Family();
+            }
+        }
 
     }
 
