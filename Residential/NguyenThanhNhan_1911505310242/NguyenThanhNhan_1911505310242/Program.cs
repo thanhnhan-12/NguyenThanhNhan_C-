@@ -7,20 +7,19 @@ using System.Collections;
 
 namespace NguyenThanhNhan_1911505310242
 {
-    // Xây dựng lớp Nguoi (Person) để quản lý thông tin của mỗi cá nhân.
-    class Person
+    /*Nguoi*/
+    class Nguoi
     {
         private string hoten_242;
         private int tuoi_242;
         private string nghenghiep_242;
         private int cmnd_242;
 
-        public Person()
+        public Nguoi()
         {
-
         }
 
-        public Person(string hoten_242, int tuoi_242, string nghenghiep_242, int cmnd_242)
+        public Nguoi(string hoten_242, int tuoi_242, string nghenghiep_242, int cmnd_242)
         {
             this.Hoten_242 = hoten_242;
             this.Tuoi_242 = tuoi_242;
@@ -33,114 +32,102 @@ namespace NguyenThanhNhan_1911505310242
         public string Nghenghiep_242 { get => nghenghiep_242; set => nghenghiep_242 = value; }
         public int Cmnd_242 { get => cmnd_242; set => cmnd_242 = value; }
 
-        public virtual void Input_Person()
+        public virtual void InputNguoi()
         {
-            Console.Write("\nNhap ho va ten: ");
+            Console.WriteLine("Nhap Ho va Ten : ");
             hoten_242 = Console.ReadLine();
-            Console.Write("\nNhap tuoi: ");
+            Console.WriteLine("Nhap tuoi: ");
             tuoi_242 = Int32.Parse(Console.ReadLine());
-            Console.Write("\nNhap nghe nghiep: ");
+            Console.WriteLine("Nhap nghe nghiep:  ");
             nghenghiep_242 = Console.ReadLine();
-            Console.Write("\nNhap so CMND: ");
+            Console.WriteLine("Nhap so cmnd: ");
             cmnd_242 = Int32.Parse(Console.ReadLine());
         }
 
-        public virtual void Output_Person()
+        public virtual void Display()
         {
-            Console.Write("Ho ten: " + hoten_242);
-            Console.Write("Tuoi: " + tuoi_242);
-            Console.Write("Nghe nghiep: " + nghenghiep_242);
-            Console.Write("CMND: " + cmnd_242);
+            Console.Write("\nHo va ten: " + hoten_242);
+            Console.Write("\nTuoi: " + tuoi_242);
+            Console.Write("\nNghe nghiep: " + nghenghiep_242);
+            Console.Write("\nCMND: " + cmnd_242);
         }
-
     }
-
-    // Xây dựng lớp HoGiaDinh (Family) để quản lý thông tin của từng hộ gia đình
-    class Family : Person
+    /*HoDan*/
+    class HoDan : Nguoi
     {
-        private int soThanhVien_242;
-        private int soNha_242;
-        private Person[] nguoi_242 = new Person[50];
+        private int sotv_242;
+        private int sonha_242;
+        private Nguoi[] thanhvien_242 = new Nguoi[10];
 
-        public Family()
+        public int Sotv_242 { get => sotv_242; set => sotv_242 = value; }
+        public int Sonha_242 { get => sonha_242; set => sonha_242 = value; }
+        internal Nguoi[] Thanhvien_242 { get => thanhvien_242; set => thanhvien_242 = value; }
+
+        public HoDan()
         {
 
         }
 
-        public Family(int soThanhVien_242, int soNha_242, Person[] nguoi_242)
+        public HoDan(int sotv_242, int sonha_242, Nguoi[] thanhvien_242)
         {
-            this.SoThanhVien_242 = soThanhVien_242;
-            this.SoNha_242 = soNha_242;
-            this.Nguoi_242 = nguoi_242;
+            this.sotv_242 = sotv_242;
+            this.sonha_242 = sonha_242;
+            this.thanhvien_242 = thanhvien_242;
         }
 
-        public int SoThanhVien_242 { get => soThanhVien_242; set => soThanhVien_242 = value; }
-        public int SoNha_242 { get => soNha_242; set => soNha_242 = value; }
-        internal Person[] Nguoi_242 { get => nguoi_242; set => nguoi_242 = value; }
-
-        public void Input_Family()
+        public void InputHoDan()
         {
-            //Console.Write("--------------------------");
-            Console.Write("\nNhap so thanh vien: ");
-            soThanhVien_242 = Int32.Parse(Console.ReadLine());
-            Console.Write("\nNhap so nha: ");
-            soNha_242 = Int32.Parse(Console.ReadLine());
-            for(int i_242 = 0; i_242 < soThanhVien_242; i_242++)
+            Console.WriteLine("Nhap so thanh vien: ");
+            sotv_242 = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Nhap so nha: ");
+            sonha_242 = Int32.Parse(Console.ReadLine());
+            for (int i = 1; i <= Sotv_242; i++)
             {
-                Console.Write("\nNhap so thanh vien thu " + i_242);
-                Person nguoi_242 = new Person();
-                nguoi_242.Input_Person();
+                Console.WriteLine("Nhap so thanh vien thu " + i);
+                thanhvien_242[i] = new Nguoi();
+                thanhvien_242[i].InputNguoi();
             }
         }
-
-        public void Output_Family()
+        public override void Display()
         {
-            Console.Write("\nSo thanh vien: " + soThanhVien_242);
-            Console.Write("\nSo nha: " + soNha_242);
-            for (int i_242 = 0; i_242 < soThanhVien_242; i_242++)
+            Console.WriteLine("So thanh vien: {0}, So nha: {1}", Sotv_242, sonha_242);
+            for (int i = 1; i <= sotv_242; i++)
             {
-                Console.Write("\nNhap so thanh vien thu " + i_242);
-                Person nguoi_242 = new Person();
-                nguoi_242.Output_Person();
+                Console.WriteLine("Thanh vien thu " + i);
+                thanhvien_242[i].Display();
             }
         }
-
     }
-
-    // Xây dựng lớp KhuPho (Town) để quản lý các thông tin của từng hộ gia đình.
-    class Town
+    /*KhuPho*/
+    class KhuPho
     {
-        private Family[] hogiadinh_242 = new Family[50];
-        private int soHoDan_242;
+        private HoDan[] dshodan_242 = new HoDan[10];
+        private int sohodan_242;
 
-        public void Input_Town()
+        public void InputKhuPho()
         {
-            Console.Write("Nhap so ho dan: ");
-            soHoDan_242 = Int32.Parse(Console.ReadLine());
-            for(int i_242 = 0; i_242 < soHoDan_242; i_242++)
+            Console.WriteLine("Nhap so ho dan: ");
+            sohodan_242 = Int32.Parse(Console.ReadLine());
+            for (int i = 1; i <= sohodan_242; i++)
             {
-                Console.Write("\nNhap so ho dan thu " + i_242);
-                Family hogiadinh_242 = new Family();
-                hogiadinh_242.Input_Family();
+                Console.WriteLine("Nhap so ho dan thu " + i);
+                dshodan_242[i] = new HoDan();
+                dshodan_242[i].InputHoDan();
             }
             Console.WriteLine("Thong tin tat ca ho dan: ");
-            for (int i_242 = 1; i_242 <= soHoDan_242; i_242++)
+            for (int i = 1; i <= sohodan_242; i++)
             {
-                Console.WriteLine("Ho dan thu " + i_242);
-                Family hogiadinh_242 = new Family();
-                hogiadinh_242.Output_Family();
+                Console.WriteLine("Ho dan thu " + i);
+                dshodan_242[i].Display();
             }
         }
-
     }
-
-
     class Program
     {
         static void Main(string[] args)
         {
-            Town khuPho_242 = new Town();
-            khuPho_242.Input_Town();
+            KhuPho ql = new KhuPho();
+            ql.InputKhuPho();
             Console.ReadKey();
         }
     }
