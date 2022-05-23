@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Manager_Document
+namespace Manager_Officer
 {
     class Program
     {

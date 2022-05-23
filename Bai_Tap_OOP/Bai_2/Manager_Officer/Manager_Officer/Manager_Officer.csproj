@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D1346259-06C6-4B94-89BC-6182B2CB4B5C}</ProjectGuid>
+    <ProjectGuid>{A2DA63B5-E7AC-47ED-8148-E18F05BCB015}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Manager_Document</RootNamespace>
-    <AssemblyName>Manager_Document</AssemblyName>
+    <RootNamespace>Manager_Officer</RootNamespace>
+    <AssemblyName>Manager_Officer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
