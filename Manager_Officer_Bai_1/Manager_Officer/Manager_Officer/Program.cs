@@ -59,6 +59,7 @@ namespace Manager_Officer
     class CongNhan : CanBo
     {
         private int bac_242;
+        private int soLuong_242;
         private CanBo[] congNhan_242 = new CanBo[20];
 
         public CongNhan()
@@ -66,13 +67,15 @@ namespace Manager_Officer
 
         }
 
-        public CongNhan(int Bac_242, CanBo[] CongNhan_242)
+        public CongNhan(int Bac_242, int SoLuong_242, CanBo[] CongNhan_242)
         {
             this.Bac_242 = Bac_242;
-            this.CongNhan_242 = CongNhan_242;
+            this.SoLuong_242 = SoLuong_242;
+            this.CongNhan_242 = CongNhan_242;           
         }
 
         public int Bac_242 { get => bac_242; set => bac_242 = value; }
+        public int SoLuong_242 { get => soLuong_242; set => soLuong_242 = value; }
         internal CanBo[] CongNhan_242 { get => congNhan_242; set => congNhan_242 = value; }
 
         public void Cap_Bac()
@@ -83,13 +86,57 @@ namespace Manager_Officer
             }
         }
 
+        public override void Nhap_CanBo()
+        {
+            Console.Write("Nhap so luong: ");
+            soLuong_242 = Int32.Parse(Console.ReadLine());
+            for(int i_242 = 1; i_242 <= soLuong_242; i_242++)
+            {
+                base.Nhap_CanBo();
+            }
+        }
+
+        public override void Xuat_CanBo()
+        {
+            for (int i_242 = 1; i_242 <= soLuong_242; i_242++)
+            {
+                base.Xuat_CanBo();
+            }          
+        }
+
+    }
+
+    /* Kỹ sư */
+    class KySu : CanBo
+    {
+        private string nganhDaoTao_242;
+        private CanBo[] kySu_242 = new CanBo[20];
+
+        public KySu()
+        {
+
+        }
+
+        public KySu(string NganhDT_242, CanBo[] KySu_242)
+        {
+            this.NganhDaoTao_242 = NganhDT_242;
+            this.KySu_242 = KySu_242;
+        }
+
+        public string NganhDaoTao_242 { get => nganhDaoTao_242; set => nganhDaoTao_242 = value; }
+        internal CanBo[] KySu_242 { get => kySu_242; set => kySu_242 = value; }
+
+
+
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-
+            CongNhan congnhan_242 = new CongNhan();
+            congnhan_242.Nhap_CanBo();
+            congnhan_242.Xuat_CanBo();
 
             Console.ReadKey();
         }
