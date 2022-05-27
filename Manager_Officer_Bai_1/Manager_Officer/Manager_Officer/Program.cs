@@ -58,7 +58,7 @@ namespace Manager_Officer
     /* Công nhân */
     class CongNhan : CanBo
     {
-        private int[] bac_242;
+        private int bac_242;
         private CanBo[] congNhan_242 = new CanBo[20];
 
         public CongNhan()
@@ -66,15 +66,22 @@ namespace Manager_Officer
 
         }
 
-        public CongNhan(int[] Bac_242, CanBo[] CongNhan_242)
+        public CongNhan(int Bac_242, CanBo[] CongNhan_242)
         {
             this.Bac_242 = Bac_242;
             this.CongNhan_242 = CongNhan_242;
         }
 
-        public int[] Bac_242 { get => bac_242; set => bac_242 = value; }
+        public int Bac_242 { get => bac_242; set => bac_242 = value; }
         internal CanBo[] CongNhan_242 { get => congNhan_242; set => congNhan_242 = value; }
 
+        public void Cap_Bac()
+        {
+            for(int i_242 = 1; i_242 <= 10; i_242++)
+            {
+                Console.Write("\nBac " + i_242);
+            }
+        }
 
     }
 
