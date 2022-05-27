@@ -46,7 +46,6 @@ namespace Manager_Officer
 
         public virtual void Xuat_CanBo()
         {
-            Console.Write("\nDanh sach: ");
             Console.Write("\n=> Ho va ten: " + hoTen_242);
             Console.Write("\n=> Tuoi: " + tuoi_242);
             Console.Write("\n=> Gioi tinh: " + gioiTinh_242);
@@ -90,19 +89,21 @@ namespace Manager_Officer
         public override void Nhap_CanBo()
         {
             //Console.Write("\n---------------------------");
-            Console.Write("Nhap so luong cho cong nhan: ");
+            Console.Write("Nhap so luong cong nhan: ");
             soLuong_CongNhan_242 = Int32.Parse(Console.ReadLine());
             for(int i_242 = 1; i_242 <= soLuong_CongNhan_242; i_242++)
             {
-                base.Nhap_CanBo();
+                congNhan_242[i_242] = new CanBo();
+                congNhan_242[i_242].Nhap_CanBo();
             }
         }
 
         public override void Xuat_CanBo()
         {
+            Console.Write("\nDanh sach: ");
             for (int i_242 = 1; i_242 <= soLuong_CongNhan_242; i_242++)
             {
-                base.Xuat_CanBo();
+                congNhan_242[i_242].Xuat_CanBo();
             }          
         }
 
@@ -134,21 +135,67 @@ namespace Manager_Officer
         public override void Nhap_CanBo()
         {
             Console.Write("\n---------------------------");
-            Console.Write("\nNhap so luong cho ky su: ");
+            Console.Write("\nNhap so luong ky su: ");
             soLuong_KySu_242 = Int32.Parse(Console.ReadLine());
-            for(int i_242 = 1; i_242 <= soLuong_KySu_242; i_242++)
+            for (int i_242 = 1; i_242 <= soLuong_KySu_242; i_242++)
             {
                 Console.Write("\nNhap nganh dao tao: ");
                 nganhDaoTao_242 = Console.ReadLine();
-                base.Nhap_CanBo();
+                kySu_242[i_242] = new CanBo();
+                kySu_242[i_242].Nhap_CanBo();
             }
         }
 
         public override void Xuat_CanBo()
         {
-            for(int i_242 = 1; i_242 <= soLuong_KySu_242; i_242++)
+            Console.Write("\nDanh sach: ");
+            for (int i_242 = 1; i_242 <= soLuong_KySu_242; i_242++)
             {
-                base.Xuat_CanBo();
+                //Console.Write("\nNganh dao tao: " + nganhDaoTao_242);
+                kySu_242[i_242].Xuat_CanBo();
+            }
+        }
+    }
+
+    /* Nhân viên */
+    class NhanVien : CanBo
+    {
+        private string congViec_242;
+        private int soLuong_NhanVien_242;
+        private CanBo[] nhanVien_242 = new CanBo[20];
+
+        public NhanVien()
+        {
+
+        }
+
+        public NhanVien(string CongViec_242, int SoLuong_NhanVien_242, CanBo[] NhanVien_242)
+        {
+            this.congViec_242 = CongViec_242;
+            this.soLuong_NhanVien_242 = SoLuong_NhanVien_242;
+            this.nhanVien_242 = NhanVien_242;
+        }
+
+        public override void Nhap_CanBo()
+        {
+            Console.Write("\n---------------------------");
+            Console.Write("\nNhap so luong nhan vien: ");
+            soLuong_NhanVien_242 = Int32.Parse(Console.ReadLine());
+            for (int i_242 = 1; i_242 <= soLuong_NhanVien_242; i_242++)
+            {
+                Console.Write("\nNhap cong viec: ");
+                congViec_242 = Console.ReadLine();
+                nhanVien_242[i_242] = new CanBo();
+                nhanVien_242[i_242].Nhap_CanBo();
+            }
+        }
+
+        public override void Xuat_CanBo()
+        {
+            Console.Write("\nDanh sach: ");
+            for (int i_242 = 1; i_242 <= soLuong_NhanVien_242; i_242++)
+            {
+                nhanVien_242[i_242].Xuat_CanBo();
             }
         }
     }
@@ -164,6 +211,10 @@ namespace Manager_Officer
             KySu kysu_242 = new KySu();
             kysu_242.Nhap_CanBo();
             kysu_242.Xuat_CanBo();
+
+            NhanVien nhanvien_242 = new NhanVien();
+            nhanvien_242.Nhap_CanBo();
+            nhanvien_242.Xuat_CanBo();
 
             Console.ReadKey();
         }
