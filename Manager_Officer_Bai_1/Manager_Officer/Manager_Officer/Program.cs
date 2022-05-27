@@ -34,23 +34,24 @@ namespace Manager_Officer
 
         public virtual void Nhap_CanBo()
         {
-            Console.Write("\nNhap Ho va Ten : ");
+            Console.Write("\n_ Nhap Ho va Ten : ");
             hoTen_242 = Console.ReadLine();
-            Console.Write("Nhap tuoi: ");
+            Console.Write("_ Nhap tuoi: ");
             tuoi_242 = Int32.Parse(Console.ReadLine());
-            Console.Write("Nhap gioi tinh: ");
+            Console.Write("_ Nhap gioi tinh: ");
             gioiTinh_242 = Console.ReadLine();
-            Console.Write("Nhap dia chi: ");
+            Console.Write("_ Nhap dia chi: ");
             diaChi_242 = Console.ReadLine();
         }
 
         public virtual void Xuat_CanBo()
         {
-            Console.Write("\n---------------------------");
-            Console.Write("\nHo va ten: " + hoTen_242);
-            Console.Write("\nTuoi: " + tuoi_242);
-            Console.Write("\nGioi tinh: " + gioiTinh_242);
-            Console.Write("\nDia chi: " + diaChi_242);
+            Console.Write("\nDanh sach: ");
+            Console.Write("\n=> Ho va ten: " + hoTen_242);
+            Console.Write("\n=> Tuoi: " + tuoi_242);
+            Console.Write("\n=> Gioi tinh: " + gioiTinh_242);
+            Console.Write("\n=> Dia chi: " + diaChi_242);
+            Console.WriteLine("");
         }
 
     }
@@ -59,7 +60,7 @@ namespace Manager_Officer
     class CongNhan : CanBo
     {
         private int bac_242;
-        private int soLuong_242;
+        private int soLuong_CongNhan_242;
         private CanBo[] congNhan_242 = new CanBo[20];
 
         public CongNhan()
@@ -67,15 +68,15 @@ namespace Manager_Officer
 
         }
 
-        public CongNhan(int Bac_242, int SoLuong_242, CanBo[] CongNhan_242)
+        public CongNhan(int Bac_242, int SoLuong_CongNhan_242, CanBo[] CongNhan_242)
         {
             this.Bac_242 = Bac_242;
-            this.SoLuong_242 = SoLuong_242;
+            this.SoLuong_CongNhan_242 = SoLuong_CongNhan_242;
             this.CongNhan_242 = CongNhan_242;           
         }
 
         public int Bac_242 { get => bac_242; set => bac_242 = value; }
-        public int SoLuong_242 { get => soLuong_242; set => soLuong_242 = value; }
+        public int SoLuong_CongNhan_242 { get => soLuong_CongNhan_242; set => soLuong_CongNhan_242 = value; }
         internal CanBo[] CongNhan_242 { get => congNhan_242; set => congNhan_242 = value; }
 
         public void Cap_Bac()
@@ -88,9 +89,10 @@ namespace Manager_Officer
 
         public override void Nhap_CanBo()
         {
-            Console.Write("Nhap so luong: ");
-            soLuong_242 = Int32.Parse(Console.ReadLine());
-            for(int i_242 = 1; i_242 <= soLuong_242; i_242++)
+            //Console.Write("\n---------------------------");
+            Console.Write("Nhap so luong cho cong nhan: ");
+            soLuong_CongNhan_242 = Int32.Parse(Console.ReadLine());
+            for(int i_242 = 1; i_242 <= soLuong_CongNhan_242; i_242++)
             {
                 base.Nhap_CanBo();
             }
@@ -98,7 +100,7 @@ namespace Manager_Officer
 
         public override void Xuat_CanBo()
         {
-            for (int i_242 = 1; i_242 <= soLuong_242; i_242++)
+            for (int i_242 = 1; i_242 <= soLuong_CongNhan_242; i_242++)
             {
                 base.Xuat_CanBo();
             }          
@@ -110,6 +112,7 @@ namespace Manager_Officer
     class KySu : CanBo
     {
         private string nganhDaoTao_242;
+        private int soLuong_KySu_242;
         private CanBo[] kySu_242 = new CanBo[20];
 
         public KySu()
@@ -117,17 +120,37 @@ namespace Manager_Officer
 
         }
 
-        public KySu(string NganhDT_242, CanBo[] KySu_242)
+        public KySu(string NganhDT_242, int SoLuong_KySu_242, CanBo[] KySu_242)
         {
             this.NganhDaoTao_242 = NganhDT_242;
+            this.SoLuong_KySu_242 = SoLuong_KySu_242;
             this.KySu_242 = KySu_242;
         }
 
         public string NganhDaoTao_242 { get => nganhDaoTao_242; set => nganhDaoTao_242 = value; }
+        public int SoLuong_KySu_242 { get => soLuong_KySu_242; set => soLuong_KySu_242 = value; }
         internal CanBo[] KySu_242 { get => kySu_242; set => kySu_242 = value; }
 
+        public override void Nhap_CanBo()
+        {
+            Console.Write("\n---------------------------");
+            Console.Write("\nNhap so luong cho ky su: ");
+            soLuong_KySu_242 = Int32.Parse(Console.ReadLine());
+            for(int i_242 = 1; i_242 <= soLuong_KySu_242; i_242++)
+            {
+                Console.Write("\nNhap nganh dao tao: ");
+                nganhDaoTao_242 = Console.ReadLine();
+                base.Nhap_CanBo();
+            }
+        }
 
-
+        public override void Xuat_CanBo()
+        {
+            for(int i_242 = 1; i_242 <= soLuong_KySu_242; i_242++)
+            {
+                base.Xuat_CanBo();
+            }
+        }
     }
 
     class Program
@@ -137,6 +160,10 @@ namespace Manager_Officer
             CongNhan congnhan_242 = new CongNhan();
             congnhan_242.Nhap_CanBo();
             congnhan_242.Xuat_CanBo();
+
+            KySu kysu_242 = new KySu();
+            kysu_242.Nhap_CanBo();
+            kysu_242.Xuat_CanBo();
 
             Console.ReadKey();
         }
