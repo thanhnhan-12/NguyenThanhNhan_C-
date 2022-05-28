@@ -200,23 +200,62 @@ namespace Manager_Officer
         }
     }
 
+    /* Quản lý cán bộ */
+    class QuanLyCanBo
+    {
+        private List<CanBo> ListCanBo = null;
+
+        public void Them_QLCB()
+        {
+            CongNhan CN_242 = new CongNhan();
+            CN_242.Nhap_CanBo();
+            CN_242.Xuat_CanBo();
+
+            KySu KS_242 = new KySu();
+            KS_242.Nhap_CanBo();
+            KS_242.Xuat_CanBo();
+
+            NhanVien NV_242 = new NhanVien();
+            NV_242.Nhap_CanBo();
+            NV_242.Xuat_CanBo();
+        }
+
+        
+    }
+ 
     class Program
     {
         static void Main(string[] args)
         {
-            CongNhan congnhan_242 = new CongNhan();
-            congnhan_242.Nhap_CanBo();
-            congnhan_242.Xuat_CanBo();
+            QuanLyCanBo QLCB_242 = new QuanLyCanBo();         
+            
+            while(true)
+            {
+                Console.WriteLine("1. Them moi can bo: ");
+                Console.WriteLine("2. Tim kiem theo ho ten: ");
+                Console.WriteLine("4. Thoat chuong trinh: ");
 
-            KySu kysu_242 = new KySu();
-            kysu_242.Nhap_CanBo();
-            kysu_242.Xuat_CanBo();
+                int ChucNang_242;
+                Console.Write("\nChon chuc nang bat ky: ");
+                ChucNang_242 = Int32.Parse(Console.ReadLine());
 
-            NhanVien nhanvien_242 = new NhanVien();
-            nhanvien_242.Nhap_CanBo();
-            nhanvien_242.Xuat_CanBo();
+                switch (ChucNang_242)
+                {
+                    case 1: QLCB_242.Them_QLCB();
+                            break;
 
-            Console.ReadKey();
+                    case 2: 
+                            break;
+
+                    case 0:
+                        Console.WriteLine("\nThoat chuong trinh!");
+                        return;
+
+                }
+
+            }
+
+                    
         }
     }
 }
