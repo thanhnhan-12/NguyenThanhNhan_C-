@@ -117,10 +117,116 @@ namespace Manager_Officer
     {      
         public void Them_QLCB()
         {
-            
+            CongNhan CN_242 = new CongNhan();
+            Console.Write("\n_Nhap ho ten cua cong nhan: ");
+            CN_242.HoTen_242 = Console.ReadLine();
+            Console.Write("\n_Nhap tuoi cua cong nhan: ");
+            CN_242.Tuoi_242 = Int32.Parse(Console.ReadLine());
+            Console.Write("\n_Nhap gioi tinh cua cong nhan: ");
+            CN_242.GioiTinh_242 = Console.ReadLine();
+            Console.Write("\n_Nhap dia chi cua cong nhan: ");
+            CN_242.DiaChi_242 = Console.ReadLine();
+            /*----------------------------------------------*/
+
+            KySu KS_242 = new KySu();
+            Console.Write("\n_Nhap ho ten cua ky su: ");
+            KS_242.HoTen_242 = Console.ReadLine();
+            Console.Write("\n_Nhap tuoi cua ky su: ");
+            KS_242.Tuoi_242 = Int32.Parse(Console.ReadLine());
+            Console.Write("\n_Nhap gioi tinh cua ky su: ");
+            KS_242.GioiTinh_242 = Console.ReadLine();
+            Console.Write("\n_Nhap dia chi cua ky su: ");
+            KS_242.DiaChi_242 = Console.ReadLine();
+            /*----------------------------------------------*/
+
+            NhanVien NV_242 = new NhanVien();
+            Console.Write("\n_Nhap ho ten cua nhan vien: ");
+            NV_242.HoTen_242 = Console.ReadLine();
+            Console.Write("\n_Nhap tuoi cua nhan vien: ");
+            NV_242.Tuoi_242 = Int32.Parse(Console.ReadLine());
+            Console.Write("\n_Nhap gioi tinh cua nhan vien: ");
+            NV_242.GioiTinh_242 = Console.ReadLine();
+            Console.Write("\n_Nhap dia chi cua nhan vien: ");
+            NV_242.DiaChi_242 = Console.ReadLine();
         }
 
-        
+        public void Xuat_QLCB(List<CongNhan> listCN_242) 
+        {
+            CongNhan CongNhan_242 = new CongNhan();
+            
+            if(listCN_242 != null && listCN_242.Count > 0)
+            {
+                for (CongNhan_242.Bac_242 = 1; CongNhan_242.Bac_242 <= 10; CongNhan_242.Bac_242++)
+                {
+                    Console.Write("\nBac " + CongNhan_242.Bac_242);
+                }
+
+                foreach (CongNhan CN_242 in listCN_242)
+                {
+                    Console.Write("\n=> Ho ten cua cong nhan: " + CN_242.HoTen_242);
+                    Console.Write("\n=> Tuoi cua cong nhan: " + CN_242.Tuoi_242);
+                    Console.Write("\n=> Gioi tinh cua cong nhan: " + CN_242.GioiTinh_242);
+                    Console.Write("\n=> Dia chi cua cong nhan: " + CN_242.DiaChi_242);
+                }
+            }
+
+        }
+
+        public void Xuat_KySu(List<KySu> listKS_242)
+        {
+            if (listKS_242 != null && listKS_242.Count > 0)
+            {
+              
+                foreach (KySu KS_242 in listKS_242)
+                {
+                    Console.Write("\n=> Ho ten cua cong nhan: " + KS_242.HoTen_242);
+                    Console.Write("\n=> Tuoi cua cong nhan: " + KS_242.Tuoi_242);
+                    Console.Write("\n=> Gioi tinh cua cong nhan: " + KS_242.GioiTinh_242);
+                    Console.Write("\n=> Dia chi cua cong nhan: " + KS_242.DiaChi_242);
+                }
+            }
+        }
+
+        public void Xuat_NhanVien(List<NhanVien> listNV_242)
+        {
+            if (listNV_242 != null && listNV_242.Count > 0)
+            {
+
+                foreach (NhanVien NV_242 in listNV_242)
+                {
+                    Console.Write("\n=> Ho ten cua cong nhan: " + NV_242.HoTen_242);
+                    Console.Write("\n=> Tuoi cua cong nhan: " + NV_242.Tuoi_242);
+                    Console.Write("\n=> Gioi tinh cua cong nhan: " + NV_242.GioiTinh_242);
+                    Console.Write("\n=> Dia chi cua cong nhan: " + NV_242.DiaChi_242);
+                }
+            }
+        }
+
+        private List<CongNhan> ListCongNhan_242 = null;
+        private List<KySu> ListKySu_242 = null;
+        private List<NhanVien> ListNhanVien_242 = null;
+
+        public QuanLyCanBo()
+        {
+            ListCongNhan_242 = new List<CongNhan>();
+            ListKySu_242 = new List<KySu>();
+            ListNhanVien_242 = new List<NhanVien>();
+        }
+
+        public List<CongNhan> getListCongNhan()
+        {
+            return ListCongNhan_242;
+        }
+
+        public List<KySu> getListKySu()
+        {
+            return ListKySu_242;
+        }
+
+        public List<NhanVien> getListNhanVien()
+        {
+            return ListNhanVien_242;
+        }
     }
  
     class Program
@@ -133,6 +239,7 @@ namespace Manager_Officer
             {
                 Console.WriteLine("1. Them moi can bo: ");
                 Console.WriteLine("2. Tim kiem theo ho ten: ");
+                Console.WriteLine("3. Hien thi danh sach: ");
                 Console.WriteLine("4. Thoat chuong trinh: ");
 
                 int ChucNang_242;
@@ -142,9 +249,11 @@ namespace Manager_Officer
                 switch (ChucNang_242)
                 {
                     case 1: QLCB_242.Them_QLCB();
+                            Console.WriteLine("Them thanh cong ");
                             break;
 
-                    case 2: 
+                    case 3: 
+                        Console.Write("Danh sach: ");
                             break;
 
                     case 0:
