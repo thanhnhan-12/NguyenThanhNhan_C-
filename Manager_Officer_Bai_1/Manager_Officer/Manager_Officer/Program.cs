@@ -115,9 +115,11 @@ namespace Manager_Officer
     /* Quản lý cán bộ */
     class QuanLyCanBo
     {
+        
         CongNhan CN_242 = new CongNhan();
         KySu KS_242 = new KySu();
         NhanVien NV_242 = new NhanVien();
+
         public void Them_QLCB()
         {           
             Console.Write("\n_Nhap ho ten cua cong nhan: ");
@@ -202,9 +204,10 @@ namespace Manager_Officer
                             Console.WriteLine("Them thanh cong ");
                             break;
 
-                    case 3: Console.Write("Danh sach: ");
-                            
+                    case 3:                            
+                            Console.Write("Danh sach: ");
                             QLCB_242.Xuat_QLCB();
+                            
                             break;
 
                     case 0:
